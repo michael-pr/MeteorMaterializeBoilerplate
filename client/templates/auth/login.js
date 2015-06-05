@@ -1,19 +1,6 @@
 Template.login.onCreated(function () {
 	resetFormErrors();
 });
-Template.login.onRendered(function () {
-	/*
-	if (Session.get("logging-out") === true) {
-		Meteor.logout(function (error) {
-			if (error) {
-				alert("We could not log you out at the moment. Please try again later.");
-			} else {
-				Session.set("loggin-out", false);
-			}
-		});
-	}
-	*/
-});
 
 Template.login.events({
 	"submit #login-form": function (e) {
