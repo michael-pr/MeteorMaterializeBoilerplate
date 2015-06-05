@@ -8,12 +8,16 @@
 					<i class="mdi-navigation-menu"></i>
 				</a>
 				<ul class="side-nav" id="side-menu">
-					<li><a href="{{ pathFor 'home' }}">Home</a></li>
-					<li><a href="{{ pathFor 'link1' }}">link 1</a></li>
-					<li><a href="{{ pathFor 'link2' }}">link 2</a></li>
-					<li><a href="{{ pathFor 'link3' }}">link 3</a></li>
-					<li><a href="{{ pathFor 'login' }}">Login</a></li>
-					<li><a href="{{ pathFor 'register' }}">Register</a></li>
+					{{#if currentUser}}
+						<li><a href="{{ pathFor 'itemsDash' }}">Dashboard</a></li>
+					{{else}}
+						<li><a href="{{ pathFor 'home' }}">Home</a></li>
+						<li><a href="{{ pathFor 'link1' }}">link 1</a></li>
+						<li><a href="{{ pathFor 'link2' }}">link 2</a></li>
+						<li><a href="{{ pathFor 'link3' }}">link 3</a></li>
+						<li><a href="{{ pathFor 'login' }}">Login</a></li>
+						<li><a href="{{ pathFor 'register' }}">Register</a></li>
+					{{/if}}
 				</ul>
 			</div>
 		</div>

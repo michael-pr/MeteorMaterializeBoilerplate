@@ -30,13 +30,13 @@
 
 /* ERRORS */
 .form-errors-wrapper {
-
+	background-color: #e57373;
+	color: #fff;
+	margin-top: 20px;
+	padding: 10px;
 }
 .show-error {
 	display: block;
 }
 
 /* GENERAL */
-.hide {
-	display: none;
-}

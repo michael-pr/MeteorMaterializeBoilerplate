@@ -1,4 +1,4 @@
-Template.errors.onRendered(function () {
+Template.generalErrors.onRendered(function () {
 	$("#error-modal").leanModal({
 		dismissible: true,
 		opacity: .5,
@@ -6,27 +6,15 @@ Template.errors.onRendered(function () {
 		out_duration: 200 
 	});
 });
-
-Template.errors.helpers({
+Template.generalErrors.helpers({
 	errors: function () {
 		return Errors.find();
 	}
 });
-
-
-Template.errors.events({
+Template.generalErrors.events({
 
 });
 
-Template.errorItem.helpers({
-	message: function () {
-
-	}
-});
-
-Template.errorItem.events({
-
-});
 
 /* FORM ERRORS */
 // TODO: Animate errors in

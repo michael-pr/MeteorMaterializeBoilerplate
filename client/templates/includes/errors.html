@@ -1,4 +1,4 @@
-<template name="errors">
+<template name="generalErrors">
 	<div id="error-modal" class="modal bottom-sheet">
 		<div class="modal-content">
 			{{#each errors}}
@@ -8,16 +8,10 @@
 	</div>
 </template>
 
-<template name="errorItem">
-	<div class="error-item">
-		{{message}}
-	</div>
-</template>
-
 
 <!-- FORM ERRORS -->
 <template name="formErrors">
-	<div class="form-errors-wrapper {{showErrorClass}}">
+	<div class="form-errors-wrapper z-depth-1 {{showErrorClass}}">
 		{{#each errors}}
 			<p>{{.}}</p>
 		{{/each}}

@@ -12,7 +12,7 @@ Template.register.events({
 			confirmPass: $(e.target).find("#register-confirm-password").val()
 		}
 
-		var errors = validateUser(user);
+		var errors = validateUserOnRegister(user);
 		if (errors.messages.length > 0)
 			return Session.set("formErrors", errors);
 
@@ -24,15 +24,19 @@ Template.register.events({
 			}
 		}, function (error) {
 			if (error) {
-				alert("There was an error creating your account. Please try again later.");
+				$("#register-password").val("");
+				$("#register-confirm-password").val("");
+				$("#register-password").select();
+
+				return Session.set("formErrors", { messages: [error.reason] });
 			} else {
-				Router.go("activityList");
+				Router.go("itemsDash");
 			}
 		});
 	}
 });
 
-validateUser = function (user) {
+validateUserOnRegister = function (user) {
 	var errors = { messages: [] };
 	if (!user.email)
 		errors.messages.push("Please enter an email");
@@ -42,3 +46,30 @@ validateUser = function (user) {
 		errors.messages.push("Your passwords do not match. Please try again");
 	return errors;
 }
+
+/*
+var isMobile = {
+	Android: function() {
+		return navigator.userAgent.match(/Android/i);
+	},
+	BlackBerry: function() {
+		return navigator.userAgent.match(/BlackBerry/i);
+	},
+	iOS: function() {
+		return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+	},
+	Opera: function() {
+		return navigator.userAgent.match(/Opera Mini/i);
+	},
+	Windows: function() {
+		return navigator.userAgent.match(/IEMobile/i);
+	},
+	any: function() {
+		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+	}
+};
+*/
+
+
+
+
