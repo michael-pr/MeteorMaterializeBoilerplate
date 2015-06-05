@@ -1,0 +1,21 @@
+
+<template name="header">
+	<nav class="light-blue">
+		<div class="container">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo center">{{currentPage}}</a>
+				<a href="#" data-activates="side-menu" class="button-collapse show-on-large">
+					<i class="mdi-navigation-menu"></i>
+				</a>
+				<ul class="side-nav" id="side-menu">
+					<li><a href="{{ pathFor 'home' }}">Home</a></li>
+					<li><a href="{{ pathFor 'link1' }}">link 1</a></li>
+					<li><a href="{{ pathFor 'link2' }}">link 2</a></li>
+					<li><a href="{{ pathFor 'link3' }}">link 3</a></li>
+					<li><a href="{{ pathFor 'login' }}">Login</a></li>
+					<li><a href="{{ pathFor 'register' }}">Register</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</template>

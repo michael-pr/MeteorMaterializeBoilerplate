@@ -1,0 +1,42 @@
+
+#main {
+	position: relative;
+}
+
+.page {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+}
+
+/* LOGIN */
+#login-form {
+	margin-top: 25px;
+}
+
+/* REGISTER */
+#register-form {
+	margin-top: 25px;
+}
+
+/* LOADING */
+.spinner-container {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+}
+
+/* ERRORS */
+.form-errors-wrapper {
+
+}
+.show-error {
+	display: block;
+}
+
+/* GENERAL */
+.hide {
+	display: none;
+}
