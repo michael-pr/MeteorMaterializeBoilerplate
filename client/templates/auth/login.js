@@ -38,7 +38,7 @@ Template.login.events({
 
 					return Session.set("formErrors", { messages: [error.reason] });
 				} else {
-					Router.go("activityList");
+					Router.go("itemsDash");
 				}
 			}
 		);

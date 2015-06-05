@@ -9,3 +9,17 @@ Template.header.helpers({
 		return Router.current().route.getName();
 	}
 });
+
+Template.header.events({
+	"click #logout-submit": function (e) {
+		e.preventDefault();
+
+		Meteor.logout(function (error) {
+			if (error) {
+				alert(error.reason);
+			} else {
+				Router.go("home");
+			}
+		});
+	}
+});

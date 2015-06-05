@@ -10,6 +10,7 @@
 				<ul class="side-nav" id="side-menu">
 					{{#if currentUser}}
 						<li><a href="{{ pathFor 'itemsDash' }}">Dashboard</a></li>
+						<li><a id="logout-submit" href="#">Logout</a></li>
 					{{else}}
 						<li><a href="{{ pathFor 'home' }}">Home</a></li>
 						<li><a href="{{ pathFor 'link1' }}">link 1</a></li>
