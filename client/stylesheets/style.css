@@ -25,12 +25,13 @@
 }
 
 /* LOADING */
-.spinner-container {
-	margin: 0;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-right: -50%;
+.spinner-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	margin-top: 200px;
+	margin-right: 32px;
 }
 
 /* ERRORS */
