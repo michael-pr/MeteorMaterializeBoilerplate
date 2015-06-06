@@ -8,3 +8,5 @@ What's coming:
 . iOS specific boilerplate
 . Android specific boilerplate
 . Web only boilerplate
+
+Demo: meteor-materialize-template.meteor.com
