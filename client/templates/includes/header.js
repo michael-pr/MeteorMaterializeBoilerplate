@@ -7,6 +7,12 @@ Template.header.onRendered(function () {
 Template.header.helpers({
 	currentPage: function () {
 		return Router.current().route.getName();
+	},
+	needSubmit: function () {
+		switch (Router.current().route.getName()) {
+			case "itemsDash": return true;
+			default: return false;
+		}
 	}
 });
 

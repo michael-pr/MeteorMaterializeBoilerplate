@@ -1,0 +1,14 @@
+<template name="itemsDash">
+	<div class="page">
+		{{#if noItems}}
+			<div class="center-align">
+				<h4>You have no items!</h4>
+				<p>Press the "+" icon to create one</p>
+			</div>
+		{{else}}
+			{{#each items}}
+				{{> itemsItem}}
+			{{/each}}
+		{{/if}}
+	</div>
+</template>

@@ -1,0 +1,15 @@
+<template name="itemSubmit">
+	<div class="page">
+		{{> formErrors}}
+		<form id="item-form">
+			<div class="input-field">
+				<label for="item-title">Title</label>
+				<input id="item-title" type="text" class="validate">
+			</div>
+			<button type="submit" class="waves-effect wave-light btn light-blue">
+				Create
+				<i class="mdi-content-send right"></i>
+			</button>
+		</form>
+	</div>
+</template>

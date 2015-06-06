@@ -7,6 +7,13 @@
 				<a href="#" data-activates="side-menu" class="button-collapse show-on-large">
 					<i class="mdi-navigation-menu"></i>
 				</a>
+
+				{{#if needSubmit}}
+					<a href="{{ pathFor 'itemSubmit' }}" class="right">
+						<i class="mdi-content-add" style="font-size: 3em;"></i>
+					</a>
+				{{/if}}
+
 				<ul class="side-nav" id="side-menu">
 					{{#if currentUser}}
 						<li><a href="{{ pathFor 'itemsDash' }}">Dashboard</a></li>
